@@ -12,7 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var personArray: [Person] = [Person]()
+    var groupArray: [OptionsGroup] = [OptionsGroup]()
+    var newPerson: String = ""
+    var newGroupName: String = ""
+    var newGroupOptions: [String] = [String]()
+    var selectedPeople: [Person] = [Person]()
+    var selectedGroup: OptionsGroup = OptionsGroup(name: "", options: [String]())
+    var optionToUtility: Dictionary<String, Int> = [String: Int]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

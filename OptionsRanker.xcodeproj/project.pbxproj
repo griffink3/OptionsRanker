@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8502B9A520B1227100294452 /* newGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8502B9A420B1227100294452 /* newGroupVC.swift */; };
+		85283D4020B22D54009BB19E /* calculatedRankingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85283D3F20B22D53009BB19E /* calculatedRankingsVC.swift */; };
+		8530ED2120B0C8150007896E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530ED2020B0C8150007896E /* Person.swift */; };
+		8530ED2320B0C8270007896E /* OptionsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530ED2220B0C8270007896E /* OptionsGroup.swift */; };
+		8530ED2520B0D5D80007896E /* newPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530ED2420B0D5D80007896E /* newPersonVC.swift */; };
+		8532F47120B1033E00B26D0E /* OriginalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532F47020B1033E00B26D0E /* OriginalVC.swift */; };
+		8532F47320B11A6C00B26D0E /* selectOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532F47220B11A6C00B26D0E /* selectOptionsVC.swift */; };
+		8572D32020B20C890071173D /* selectRankingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572D31F20B20C890071173D /* selectRankingsVC.swift */; };
 		85F41E0820B0C0160064523E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F41E0720B0C0160064523E /* AppDelegate.swift */; };
 		85F41E0A20B0C0160064523E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F41E0920B0C0160064523E /* ViewController.swift */; };
 		85F41E0D20B0C0160064523E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F41E0B20B0C0160064523E /* Main.storyboard */; };
@@ -26,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8502B9A420B1227100294452 /* newGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newGroupVC.swift; sourceTree = "<group>"; };
+		85283D3F20B22D53009BB19E /* calculatedRankingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatedRankingsVC.swift; sourceTree = "<group>"; };
+		8530ED2020B0C8150007896E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		8530ED2220B0C8270007896E /* OptionsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsGroup.swift; sourceTree = "<group>"; };
+		8530ED2420B0D5D80007896E /* newPersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPersonVC.swift; sourceTree = "<group>"; };
+		8532F47020B1033E00B26D0E /* OriginalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalVC.swift; sourceTree = "<group>"; };
+		8532F47220B11A6C00B26D0E /* selectOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectOptionsVC.swift; sourceTree = "<group>"; };
+		8572D31F20B20C890071173D /* selectRankingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectRankingsVC.swift; sourceTree = "<group>"; };
 		85F41E0420B0C0160064523E /* OptionsRanker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptionsRanker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F41E0720B0C0160064523E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85F41E0920B0C0160064523E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +99,14 @@
 				85F41E0E20B0C0180064523E /* Assets.xcassets */,
 				85F41E1020B0C0180064523E /* LaunchScreen.storyboard */,
 				85F41E1320B0C0180064523E /* Info.plist */,
+				8530ED2020B0C8150007896E /* Person.swift */,
+				8530ED2220B0C8270007896E /* OptionsGroup.swift */,
+				8530ED2420B0D5D80007896E /* newPersonVC.swift */,
+				8532F47020B1033E00B26D0E /* OriginalVC.swift */,
+				8532F47220B11A6C00B26D0E /* selectOptionsVC.swift */,
+				8502B9A420B1227100294452 /* newGroupVC.swift */,
+				8572D31F20B20C890071173D /* selectRankingsVC.swift */,
+				85283D3F20B22D53009BB19E /* calculatedRankingsVC.swift */,
 			);
 			path = OptionsRanker;
 			sourceTree = "<group>";
@@ -198,7 +222,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F41E0A20B0C0160064523E /* ViewController.swift in Sources */,
+				8572D32020B20C890071173D /* selectRankingsVC.swift in Sources */,
+				8532F47120B1033E00B26D0E /* OriginalVC.swift in Sources */,
+				8530ED2120B0C8150007896E /* Person.swift in Sources */,
+				8502B9A520B1227100294452 /* newGroupVC.swift in Sources */,
 				85F41E0820B0C0160064523E /* AppDelegate.swift in Sources */,
+				8530ED2320B0C8270007896E /* OptionsGroup.swift in Sources */,
+				85283D4020B22D54009BB19E /* calculatedRankingsVC.swift in Sources */,
+				8530ED2520B0D5D80007896E /* newPersonVC.swift in Sources */,
+				8532F47320B11A6C00B26D0E /* selectOptionsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
