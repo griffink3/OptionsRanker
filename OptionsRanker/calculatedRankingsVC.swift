@@ -36,15 +36,22 @@ class calculatedRankingsVC: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func calculateRankings() {
-        var dict: Dictionary<Int, String> = [Int: String]()
+        var dict: Dictionary<Int, [String]> = [Int: [String]]()
         var utilities: [Int] = [Int]()
         for (option, utility) in optionToUtility {
-            dict[utility] = option
+            if (dict[utility] == nil) {
+                dict[utility] = [String]()
+                dict[utility]?.append(option)
+            } else {
+                dict[utility]?.append(option)
+            }
             utilities.append(utility)
         }
         utilities = utilities.sorted().reversed()
         for utility in utilities {
-            sortedOptions.append(dict[utility]!)
+            for option in dict[utility]! {
+                sortedOptions.append(option)
+            }
         }
     }
     

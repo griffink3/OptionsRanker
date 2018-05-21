@@ -37,10 +37,11 @@ class ViewController: UIViewController, UITableViewDataSource {
             personArray = appDelegate.personArray
         }
         if let savePeople = loadPeople() {
-            if savePeople.isEmpty {
-                print("YES")
+            for person in savePeople {
+                if (!checkName(people: personArray, name: person.name)) {
+                    personArray.append(person)
+                }
             }
-            personArray += savePeople
         }
         if (appDelegate.newPerson != "") {
             personArray.append(Person(name: appDelegate.newPerson))
@@ -72,6 +73,9 @@ class ViewController: UIViewController, UITableViewDataSource {
             }
             return shouldSegue
         }
+        if (identifier == "back") {
+            appDelegate.personArray.removeAll()
+        }
         return true
     }
     
@@ -85,28 +89,42 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    func checkName(people: [Person], name: String) -> Bool {
+        for person in people {
+            if (name == person.name) {
+                return true
+            }
+        }
+        return false
+    }
+    
     // MARK: Actions
     @IBAction func deletePerson(_ sender: UIButton) {
-        var toDelete: [Person] = [Person]()
-        for row in personTable.indexPathsForSelectedRows! {
-            print(row.row)
-            toDelete.append(personArray[row.row])
-        }
-        var temp: [Person] = [Person]()
-        for person in personArray {
-            var add: Bool = true
-            for p in toDelete {
-                if (person.name == p.name) {
-                    add = false
+        if (personTable.indexPathsForSelectedRows == nil) {
+            errorLabel.text = "Please select people"
+        } else {
+            errorLabel.text = ""
+            var toDelete: [Person] = [Person]()
+            for row in personTable.indexPathsForSelectedRows! {
+                print(row.row)
+                toDelete.append(personArray[row.row])
+            }
+            var temp: [Person] = [Person]()
+            for person in personArray {
+                var add: Bool = true
+                for p in toDelete {
+                    if (person.name == p.name) {
+                        add = false
+                    }
+                }
+                if (add) {
+                    temp.append(person)
                 }
             }
-            if (add) {
-                temp.append(person)
-            }
+            personArray = temp
+            savePeople()
+            personTable.reloadData()
         }
-        personArray = temp
-        savePeople()
-        personTable.reloadData()
     }
     
     @IBAction func selectPeople(_ sender: UIButton) {

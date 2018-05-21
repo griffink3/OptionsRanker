@@ -34,9 +34,6 @@ class selectOptionsVC: UIViewController, UITableViewDataSource {
         groupTable.dataSource = self
         groupTable.allowsSelection = true
         groupTable.allowsMultipleSelection = false
-        if (appDelegate.newGroupName == "" && appDelegate.newGroupOptions.isEmpty) {
-            groupArray = appDelegate.groupArray
-        }
         groupArray = appDelegate.groupArray
         if let saveGroups = loadGroups() {
             groupArray += saveGroups
@@ -85,9 +82,14 @@ class selectOptionsVC: UIViewController, UITableViewDataSource {
     
     // MARK: Actions
     @IBAction func deleteGroup(_ sender: UIButton) {
-        groupArray.remove(at: (groupTable.indexPathForSelectedRow?.row)!)
-        saveGroups()
-        groupTable.reloadData()
+        if (groupTable.indexPathForSelectedRow == nil) {
+            errorLabel.text = "Please select people"
+        } else {
+            errorLabel.text = ""
+            groupArray.remove(at: (groupTable.indexPathForSelectedRow?.row)!)
+            saveGroups()
+            groupTable.reloadData()
+        }
     }
     
     

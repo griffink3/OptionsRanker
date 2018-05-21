@@ -117,7 +117,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="M21-uB-WfC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="back" id="M21-uB-WfC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5E-Vb-VOw">
@@ -816,6 +816,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="XmR-aS-7GR" kind="show" id="2EY-7R-yhi"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1o0-AL-65V">
                                 <rect key="frame" x="54" y="202" width="76" height="42"/>
@@ -907,7 +910,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ttH-uj-N7A"/>
-        <segue reference="hSa-Bs-qWY"/>
+        <segue reference="2EY-7R-yhi"/>
         <segue reference="n5j-dH-zXy"/>
     </inferredMetricsTieBreakers>
 </document>
